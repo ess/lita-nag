@@ -6,7 +6,7 @@ module Lita
       def nag(response)
         response.reply("Added '#{response.args.join(" ")}'")
         response.reply("response methods: '#{response.methods.sort}'")
-        response.reply("room == '#{response.room}'")
+        response.reply("room == '#{response.room.name} (#{response.room.id})'")
       end
 
       Lita.register_handler(self)
