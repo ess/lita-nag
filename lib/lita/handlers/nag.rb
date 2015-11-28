@@ -4,7 +4,7 @@ module Lita
       route(/^nag\s+(.+)/, :nag, command: true)
 
       def nag(response)
-        response.reply("Added '#{args.join(" ")}'")
+        response.reply("Added '#{response.args.join(" ")}'")
       end
 
       Lita.register_handler(self)
